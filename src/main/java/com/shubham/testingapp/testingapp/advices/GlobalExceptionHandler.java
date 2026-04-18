@@ -9,7 +9,7 @@ import org.springframework.web.client.ResourceAccessException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ResourceAccessException.class)
+    @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<?> handleResourceNotFoundException(ResourceNotFoundException ex) {
         return ResponseEntity.notFound().build();
     }
